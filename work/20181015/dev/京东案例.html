@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东</title>
+	<link rel="icon" href="img/favicon.ico" type="image/jd-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/jd-icon">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+		body{
+			font: 16px/1.2 Arial,Verdana,"宋体";
+		}
+		.header{
+			width: 100%;
+			height: 80px;
+			/*background-color:pink;*/
+			overflow: hidden;
+		}
+		.header .header-l{
+			position: relative;
+			/*display: block;*/
+			margin: 0 auto;
+			width: 990px;
+			height: 80px;
+			/*background-image: url(img/logo.png) no-repeat;*/
+		}
+		.header .logo{
+			float: left;
+			display: block;
+			width: 170px;
+			height: 100%;
+			/*background-color:red;*/
+			background: url(img/logo.png) no-repeat center;
+		}
+		.header .welcome{
+			float: left;
+			display: block;
+			width: 150px;
+			height: 80px;
+			/*font-family: "宋体"*/
+			font-size:30px;
+			line-height: 100%;
+			margin-top: 35px;
+/*			margin-left: 10px;*/
+			text-align: center;
+			/*background-color: blue;*/
+		}
+		.header .header-l .ask{
+			display: block;
+			position: absolute;
+			width: 200px;
+			height: 20px;
+			right: 0;
+			bottom: 0;
+			color: #999;
+			font-size: 14px;
+			text-indent: 20px;
+			background: url(img/q-icon.png) no-repeat;
+			background-position: 0 5px;
+			}
+			.header .header-l .ask:hover{
+				color: red;
+				text-decoration:underline;
+			}
+			.tip{
+				width: 100%;
+				height: 38px;
+				padding: 0 auto;
+				background-color:#FFF8F0;
+			}
+			.tip .tip-content{
+				display: block;
+				margin: 0 auto;
+				width: 990px;
+				height: 38px;
+				font-size: 12px;
+				line-height: 38px;
+				text-align: center;
+				color:#999;
+				/*background-color: blue;*/
+			}
+			.tip .icon{
+				vertical-align: middle;
+			}
+			.tip .icon-a:hover{
+				text-decoration:underline;
+			}
+			/*内容部分*/
+			.content{
+				width: 100%;
+				height: 475px;
+				background-color: #DE9C3C;
+			}
+			.content .content-topic{
+				position:relative;
+				margin: 0 auto; 
+				width: 990px;
+				height: 475px;
+				background: url(img/topic.jpg) no-repeat center;
+			}
+			.content .content-tab{
+				position: absolute;
+				top: 10px;
+				right: 0;
+				width: 345px;
+				height: 400px;
+				background-color:#fff;
+			}
+			.content .content-tab .tip-content{
+				display: block;
+				/*margin: 0 auto;*/
+				width: 345px;
+				height: 38px;
+				font-size: 12px;
+				line-height: 38px;
+				text-align: center;
+				color:#999;
+				background-color:#FFF8F0;
+			}
+			.content .content-tab .icon{
+				vertical-align: middle;
+			}
+			/*登录框部分*/
+			.content .login{
+				width: 345px;
+				height: 50px;
+				/*background-color: blue;*/
+				border-bottom: 1px #F4F4F4 solid;
+			}
+			.content .login .scanning
+			,.content .login .account{
+				float: left;
+				width: 172px;
+				height: 100%;
+				line-height:50px;
+				font-size: 18px;
+				text-align: center;
+				font-family: '黑体'
+				/*background-color:blue;*/
+/*				border:1px red solid;*/
+			}
+			.content .login .scanning{
+				border-right:1px #F4F4F4 solid;
+			}
+			.content .login .scanning-a{
+				color:#666666;
+			}
+			.scanning .scanning-a:hover{
+				color:red;
+			}
+			.active{
+				color:red;
+			}
+			.content .content-tab .username
+			,.content .content-tab .password{
+				margin: 0 auto;
+				margin-top: 30px;
+				width: 306px;
+				height: 38px;
+				border: 1px #E5E5E5 solid;
+				font-size: 14px;
+				line-height: 100%;
+				text-align:right;
+			}
+			.content .username .avanter{
+				float: left;
+				display: block;
+				width: 38px;
+				height: 38px;
+				/*background-color: blue*/;
+				background-image: url(img/pwd-icons-new.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+			}
+			.content .password .lock{
+				float: left;
+				display: block;
+				width: 38px;
+				height: 38px;
+				background-image: url(img/pwd-icons-new.png);
+				background-repeat: no-repeat;
+				background-position:-48px 0;
+			}
+			.content .username .input-username,
+			.content .password .input-password{
+				float: left;
+				border:none;
+				width: 263px;
+				height: 38px;
+				text-indent: 20px;
+				color: #333;
+				outline: none;
+				border-left: 1px #E5E5E5 solid;
+			}
+			.content .forgetpassword{
+				position: relative;
+				display: block;
+				margin:0 auto;
+				width: 306px;
+				height: 58px;
+				}
+			.content .forgetpassword .touch{
+				position: absolute;
+				right: 0;
+				bottom: 20px;
+				display: block;
+				width: 48px;
+				height: 14px;
+				font-size: 12px;
+				line-height: 14px;
+				text-align: center;
+				color: #333;
+			}
+			.content .forgetpassword .touch:hover{
+				color: red;
+				text-decoration:underline;
+			}
+			.content .button{
+				margin: 0 auto;
+				width: 306px;
+				height: 33px;
+				background-color:red;
+			}
+			.content .button .btn{
+				display: block;
+				width: 306px;
+				height: 33px;
+				font-size: 26px;
+				line-height: 33px;
+				text-align: center;
+				color: #fff;
+			}
+			.content .footer-icons{
+				width: 346px;
+				height: 50px;
+				background-color: #FCFCFC;
+			}
+			.content .icons{
+				margin: 40px auto;
+				width: 306px;
+				height: 50px;
+			}
+			.content .icons-wx
+			,.content .icons-qq{
+				float: left;
+				display:block;
+				width: 48px;
+				height: 60px;
+				/*background-color:purple; */
+			}
+			.content .icons .solid{
+				float: left;
+				display: inline-block;
+				width: 1px;
+				height: 16px;
+				background-color: #999;
+				margin: 0 20px;
+
+			}
+			.content .icons-qq{
+			/*	background-color: red;*/
+			}
+			.content .icons .qq-lt
+			,.content .icons .wx-lt{
+				float: left;
+				display: block;
+				width: 48px;
+				height: 20px;
+				font-size: 14px;
+				color: #333;
+			}
+			.content .qq-lt .msg-1,
+			.content .wx-lt .msg-2{
+				float: left;
+				display: block;
+				width: 19px;
+				height: 19px;
+			}
+			.content .qq-lt .msg-1{
+				background:url(img/qq-wx.png) no-repeat;
+				margin: 0 0;
+			}
+			.content .wx-lt .msg-2{
+				background:url(img/qq-wx.png) no-repeat;
+				margin-left:0;
+				background-position: -19px 0;
+			}
+			.content .reg{
+				position: relative;
+				overflow: hidden;
+				float:right;
+				display: block;
+				width: 90px;
+				height: 19px;
+				/*background-color: blue;*/
+			}
+			.content .reg .reg-text{
+				display: block;
+				width:90px;
+				height: 19px;
+				font-size: 14px;
+				line-height:19px;
+				text-indent: 19px;
+				color: #E21C19;
+			}
+			.content .reg .reg-icon{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display:block;
+				width: 19px;
+				height: 19px;
+				/*background-color:red;*/
+				background:url(img/pwd-icons-new.png) no-repeat;
+				background-position: -102px -73px;
+			}
+			/*尾部*/
+			.footer{
+				overflow: hidden;
+				width: 100%;
+				height: 146px;
+				/*background-color:pink;*/
+			}
+			.footer .footer-link{
+				margin: 20px auto;
+				width: 990px;
+				height: 18px;
+				text-align: center;
+				/*background-color:blue;*/
+			}
+			.footer .footer-a{
+				/*display:inline-block;*/
+				/*width: 80px;*/
+				/*height: 16px;*/
+				line-height: 14px;
+				font-size: 12px;
+				color: #666;
+			}
+			.footer .footer-a .footer-solid{
+				display: inline-block;
+				width: 1px;
+				height: 15px;
+				background-color:#999;
+				margin-left:10px;
+				margin-right: 10px;
+			}
+			.footer .footer-text{
+				display: block;
+				margin: 20px auto;
+				width: 990px;
+				height: 18px;
+				line-height: 18px;
+				font-size: 12px;
+				text-align: center;
+				color: #666;
+			}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="header-l">
+			<a class="logo" href="http//www.jd.com"></a>
+			<span class="welcome">欢迎登录</span>
+			<a href="#" class="ask">登录页面,调查问卷</a>
+		</div>
+	</div>
+	<div class="tip">
+		<span class="tips tip-content">
+			<img src="img/icon-tips.png" alt="" class="icon">
+			依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版 <a href="#" style="color: #000"  class="icon-a">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。
+		</span>
+	</div>
+	<div class="content">
+		<div class="content-topic">
+			<div class="content-tab">
+				<span class="content tip-content">
+					<img src="img/icon-tips.png" alt="" class="icon">
+				京东不会以任何理由要求您转账汇款，谨防诈骗。
+				</span>
+				<div class="login">
+					<div class="scanning">
+						<a href="#" class="scanning-link scanning-a">扫描登录</a>
+					</div>
+					<div class="account">
+						<a href="#" class="account-link active">账户登录
+						</a>
+					</div>
+				</div>
+				<div class="username">
+					<span class="avanter"></span>
+					<input class="input-username" type="text" placeholder="邮箱/用户名/已验证手机">
+				</div>
+				<div class="password">
+					<span class="lock"></span>
+					<input class="input-password" type="text" placeholder="密码">
+				</div>
+				<span class="forgetpassword">
+					<a href="#" class="touch">忘记密码</a>
+				</span>
+				<p class="button">
+					<a href="#" class="btn">登录</a>
+				</p>
+				<div class="footer-icons">
+					<div class="icons">
+						<p class="icons-qq">
+							<a href="#" class="qq-lt">
+								QQ
+								<span class="msg-1"></span>
+							</a>
+						</p>
+						<p class="solid"></p>
+						<p class="icons-wx">
+							<a href="#" class="wx-lt">
+								微信
+								<span class="msg-2"></span>
+							</a>
+						</p>
+						<p class="reg">
+							<a href="#" class="reg-text">
+								立即注册
+								<span class="reg-icon"></span>
+							</a>
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-link">
+			<a href="#" class="footer-a">
+				关于我们
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				联系我们
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				人才招聘
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				商家入驻
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				广告服务
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				手机京东
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				友情链接
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				销售联盟
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				京东社区
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				京东公益
+				<span class="footer-solid"></span>
+			</a>
+			<a href="#" class="footer-a">
+				Engish site
+			</a>
+		</div>
+			<span class="footer-text">Copyright © 2004-2018  京东JD.com 版权所有</span>
+	</div>
+</body>
+</html>
