@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 用户输入数字
+		var arr=[];
+		var num=prompt('请输入1000以内任意数字');
+		for (var i = 1; i<=1000; i++) {
+			if (num%i==0) {
+				arr.push(i);
+			}
+		}
+		if (arr.length==2) {
+			alert('这个数字为质数');
+		}else{
+			alert('这个数字不是质数');
+		}
+		console.log(arr);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

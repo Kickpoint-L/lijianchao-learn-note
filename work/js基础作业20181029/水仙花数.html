@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var a =0;
+		var b =0;
+		var c =0;
+		for (var i = 100; i<=999; i++) {
+			a=Math.floor(i/100);
+			b=Math.floor((i%100)/10);
+			c=((i%100)%10);
+			if (i==a*a*a+b*b*b+c*c*c) {
+				console.log(i);
+			}
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
