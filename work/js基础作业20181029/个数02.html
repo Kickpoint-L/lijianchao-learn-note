@@ -5,8 +5,8 @@
 	<title>Document</title>
 	<script>
 		var arr =[];
-		var num=prompt('请输入100以内任意数字');
-		for (var i = 1; i<=100; i++) {
+		var num=parseInt(prompt('请用户输入数字'));
+		for (var i = 1; i<=num; i++) {
 			if (num%i==0) {
 				arr.push(i);
 				console.log(i);

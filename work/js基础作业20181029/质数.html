@@ -5,19 +5,28 @@
 	<title>Document</title>
 	<script>
 		// 用户输入数字
-		var arr=[];
-		var num=prompt('请输入1000以内任意数字');
-		for (var i = 1; i<=1000; i++) {
+		// var arr=[];
+		// var num=parseInt(prompt('请输入1000以内任意数字'));
+		// for (var i = 1; i<=1000; i++) {
+		// 	if (num%i==0) {
+		// 		arr.push(i);
+		// 	}
+		// }
+		// if (arr.length==2) {
+		// 	alert('这个数字为质数');
+		// }else{
+		// 	alert('这个数字不是质数');
+		// }
+		// console.log(arr);
+		var num=parseInt(prompt('请用户输入数字'));
+		var isZhi =true;
+		for (var i = 2; i<num; i++) {
 			if (num%i==0) {
-				arr.push(i);
+				isZhi=false;
+				break;
 			}
 		}
-		if (arr.length==2) {
-			alert('这个数字为质数');
-		}else{
-			alert('这个数字不是质数');
-		}
-		console.log(arr);
+		alert('您输入的数字为'+num+','+(isZhi?'是质数':'不是质数!'));
 	</script>
 </head>
 <body>

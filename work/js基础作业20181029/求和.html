@@ -4,11 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script>
-		var num=0;
-		for (var i = 0; i<=100; i++) {
-			num += i;
+		// 请用户输入
+		var num=parseInt(prompt('请用户输入数字'));
+		var a=0;
+		for (var i = 0; i<=num; i++) {
+			a += i;
 		}
-		console.log(num);
+		alert('您输入的数字为'+num+','+'和为'+a);
 	</script>
 </head>
 <body>
