@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		arr1=[2,5,3,4,9,6];
+		var arr2=select(arr1);
+		alert(arr2);
+
+
+
+
+
+
+
+		function select(arr){
+			for (var i = 0; i<arr.length-1; i++) {
+				for (var b = 0; b<arr.length-1-i; b++) {
+					if (arr[b]<arr[b+1]) {
+						temp=arr[b];
+						arr[b]=arr[b+1];
+						arr[b+1]=temp;
+					}
+				}
+			}
+			var a='该数组的最大值为'+arr[0]+','+'最小值为'+arr[arr.length-1];
+			// var a=arr[0];
+			return a;
+			// alert('该数组的最大值为'+arr[0]+','+'最小值为'+arr[arr.length-1])
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

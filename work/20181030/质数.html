@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var num=parseInt(prompt('请输入数字'));
+		zhi(num);
+
+
+
+
+
+
+
+
+
+		
+		function zhi(n){
+			var isZhi=true;
+			for (var i = 2; i <n; i++) {
+				if (n%i==0) {
+					isZhi=false;
+					break;
+				}
+			}
+			alert('输入的数字为'+n+','+(isZhi?'是质数':'不是质数'))
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

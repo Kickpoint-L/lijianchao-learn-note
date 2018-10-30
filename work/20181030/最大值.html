@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		arr1=[7,9];
+		arr2=[5,8,3];
+		select(arr1);
+		select(arr2);
+
+
+
+
+
+
+
+		function select(arr){
+			for (var i = 0; i <arr.length-1; i++) {
+				for (var a =0 ; a <arr.length-1-i; a++) {
+					if (arr[a]<arr[a+1]) {
+						var temp=arr[a];
+						arr[a]=arr[a+1];
+						arr[a+1]=temp;
+					}
+				}
+			}
+			alert('这组数中的最大值为'+arr[0]);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
