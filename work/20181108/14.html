@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/util.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.bg{
+			position: relative;
+			margin: 50px auto;
+			width: 400px;
+			height: 400px;
+		}
+		.bg .imge{
+			width: 100%;
+			height: 100%;
+		}
+		.bg .btn{
+			position: absolute;
+			display: block;
+			width: 60px;
+			height: 20px;
+			font-size: 14px;
+			line-height: 20px;
+			text-align: center;
+			left: 0;
+			top: 200px;
+			cursor:pointer;
+		}
+		.bg .btn.btn2{
+			left: auto;
+			right: 0;
+		}
+		.bg .ulEl{
+			position: absolute;
+			left: 40px;
+			top: 360px;
+			height: 10px;
+		}
+		.bg .lis{
+			float: left;
+			margin-left: 6px;
+			width: 10px;
+			height: 10px;
+			background-color:blue;
+		}
+		.bg .lis.active{
+			background-color:red ;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<img src="img/fbb.jpg" alt="" class="imge">
+		<button class="btn btn1" onclick="lb(true)">上一张</button>
+		<button class="btn btn2" onclick="lb(false)">下一张</button>
+		<ul class="ulEl">
+		</ul>
+	</div>
+	<script>
+		var bg = document.getElementsByClassName('bg')[0];
+		var bgImg = document.getElementsByClassName('imge')[0];
+		var ulEl = document.getElementsByClassName('ulEl')[0];
+		var imgs = ['fbb.jpg','sjl.jpg','hulk.jpg','m1.jpg','m2.jpg','m3.jpg','m5.jpg'];
+
+		add(ulEl,imgs);
+		var count = 0;
+		function lb(isLeft){
+			if(isLeft){
+				if (count == 0) {
+					count = imgs.length-1;
+				}else{
+					count --;
+				}
+			}else{
+				if (count == imgs.length-1) {
+					count = 0;
+				}else{
+					count ++;
+				}
+			}
+			bgImg.src = 'img/'+imgs[count];
+
+			//当按钮被点击的时候希望删除原有图片的active,并在现在显示的小方块中激活active样式.
+			var lis = document.getElementsByClassName('lis');
+			for (var i = 0; i<imgs.length; i++) {
+				delClass(lis[i],'active');
+			}
+			addClass(lis[count],'active');
+		}
+		
+		function add(el,lis){
+			//动态的添加lis样式
+			var str = '';
+			for (var i = 0; i<lis.length; i++) {
+				str += '<li class="lis '+(i == 0?'active':'')+'"></li>';
+			}
+			console.log(str)
+			el.innerHTML = str;
+		}
+	</script>
+</body>
+</html>
