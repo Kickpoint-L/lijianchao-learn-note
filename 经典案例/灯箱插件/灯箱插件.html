@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 1.引入外部样式 -->
+	<link rel="stylesheet" href="lib/lightbox/css/lightbox.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.box{
+			margin:100px auto;
+			display: block;
+			width: 1000px;
+			height: 300px;
+		}
+		.box>a{
+			display:inline-block;
+			/*float: left;*/
+		}
+		.box .img{
+			display: inline-block;
+			width: 200px;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<a href="img/a1.jpg" data-lightbox="image-1" data-title="我的灯箱"><img src="img/a1.jpg" alt="" class="img"></a>	
+		<a href="img/a2.jpg" data-lightbox="image-1" data-title="我的灯箱"><img src="img/a2.jpg" alt="" class="img"></a>	
+		<a href="img/a3.jpg" data-lightbox="image-1" data-title="我的灯箱"><img src="img/a3.jpg" alt="" class="img"></a>	
+		<a href="img/a4.jpg" data-lightbox="image-1" data-title="我的灯箱"><img src="img/a4.jpg" alt="" class="img"></a>	
+	</div>
+	
+
+	<!-- 2.引入依赖库 -->
+	<script src="lib/jquery-3.3.1.min.js"></script>
+	<!-- 3.引入核心库 -->
+	<script src="lib/lightbox/js/lightbox.js"></script>
+	<!-- 4.初始化插件对象 -->
+	<script>
+		lightbox.option({
+	      'resizeDuration': 1000,
+	      'wrapAround': true
+	    })	
+	</script>
+</body>
+</html>
