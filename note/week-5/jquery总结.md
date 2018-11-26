@@ -168,6 +168,102 @@ $('').offset().top;指的是距离页面的头部距离
 而$('').position();则指的是当前盒子距离具有定位的父类的位置
 position()属性同时包含了left和top
 
+# jquery03
+#### jQuery事件机制
+###### 事件的绑定
+bind事件绑定,delegate事件绑定,on
+简单事件绑定
+![Image 7.jpg](https://upload-images.jianshu.io/upload_images/14538814-c01bfe20be089b7f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+bind方式不推荐,在jquery版本1.7以后被on替代
+给匹配的元素直接绑定事件 **对于尚未存在的元素无法绑定**
+$("p").bind("click mouseenter", function(e){	
+});
+
+delegate方式(性能高,支持动态创建元素)
+给匹配到的元素绑定事件，对支持动态创建的元素有效 
+$(".parentBox").delegate("p", "click", function(){   
+});
+与前两种方式最大的优势：减少事件绑定次数提高效率，支持动态创建出来的元素绑定事件！
+
+on方式(兼容zepto(移动端类似jQuery的一个库)，建议使用的方式)
+jQuery1.7版本后，jQuery用on统一了所有的事件处理的方法
+作用：给匹配的元素绑定事件，包括了上面所有绑定事件方式的优点
+###### 事件的解绑
+unbind()解绑
+$(selector).unbind();    // 解绑所有事件
+$(selector).unbind(“click”,fn);   //  解绑固定事件
+$(selector).unbind(“click”);   //  解除一类事件
+
+undelegate()解绑
+$( selector ).undelegate();
+$( selector).undelegate( “click” ); 
+$( selector).undelegate( “xx”,“click”); 
+$( selector).undelegate( “xx”,“click”,fn ); 
+
+off()解绑
+$(selector).off();
+
+$(selector).off(“click”);解绑所有代理的click事件，元素本身的事件不会被解绑
+$(selector).off( “click”, “xx” ); 
+
+$(selector).off( “click”, “xx” ,fn);
+
+###### 事件的触发
+target()触发指定的事件
+$(selector).trigger(“click”);
+
+triggerHandler() 方法触发被选元素的指定事件类型。
+$(selector).triggerHandler(“click”);
+
+trigger()和triggerHandler()方法的不同
+它不会引起事件（比如表单提交）的默认行为（细节，开发并不在意）
+.trigger() 会操作 jQuery 对象匹配的所有元素，而 .triggerHandler() 只影响第一个匹配元素。
+由 .triggerHandler() 创建的事件不会在 DOM 树中冒泡；如果目标元素不直接处理它们，则不会发生任何事情。
+该方法的返回的是事件处理函数的返回值，而不是具有可链性的 jQuery 对象。此外，如果没有处理程序被触发，则这个方法返回 undefined。
+
+#### jquery事件对象介绍
+event.data ;传递给事件处理程序的额外数据
+event.currentTarget ;等同于this，当前DOM对象\
+event.pageX ;鼠标相对于**文档**左部边缘的位置
+event.target ;触发事件源，不一定===this
+event.stopPropagation()；阻止事件冒泡
+event.preventDefault(); 阻止默认行为（例如，当点击提交按钮时阻止对表单的提交）
+event.type ;事件类型：click，dbclick…
+event.which ;
+![Image 8.jpg](https://upload-images.jianshu.io/upload_images/14538814-99f379096172f767.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+event.keyCode;键盘按键代码(返回相应键盘按键的AscII值.)
+###### 隐式迭代
+隐式迭代的意思是：在方法的内部会为匹配到的所有元素进行循环遍历，执行相应的方法；而不用我们再进行循环，简化我们的操作，方便我们调用。
+如果获取的是多元素的值，大部分情况下返回的是第一个元素的值。
+
+###### each方法
+大部分情况下是不需要使用each方法的，因为jQuery的隐式迭代特性。
+**如果要对每个元素做不同的处理，这时候就用到了each方法**
+遍历jQuery对象集合，为每个匹配的元素执行一个函数$(selector).each(function(index,element){});
+Element是一个 js对象，需要转换成jquery对象
+###### 多库共存
+此处多库共存指的是：jQuery占用了$ 和jQuery这两个变量。当在同一个页面中引用了jQuery这个js库，并且引用的其他库（或者其他版本的jQuery库）中也用到了$或者jQuery这两个变量，那么，要保证每个库都能正常使用，这时候就有了多库共存的问题
+解决方法
+$.noConflict();让jQuery释放对$的控制权，让其他库能够使用$符号，达到多库共存的目的。此后，只能使用jQuery来调用jQuery提供的方法
+
+# jquery插件的使用
+1.	下载插件库
+2.	在页面引入插件的css或者字体图片等（如果有的话）
+3.	在页面引入jQuery.js
+4.	在页面引入插件的js文件（core）
+5.	在页面通过插件的api初始化插件 即可使用（通过查看相应的API）
+常用的插件有  **日历插件**   **滚动插件**    **表格插件**    **报表插件echar**   **树行插件**  **富文本插件**
+
+
+
+
+
+
+
+
+
+
 
 
 
