@@ -1,0 +1,824 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+
+@media print {
+  body .markdown-body {
+    padding: 0;
+    border: none;
+  }
+}
+</style><title>CSS3渐变过渡</title></head><body><article class="markdown-body"><h4>
+<a id="user-content-边框" class="anchor" href="#%E8%BE%B9%E6%A1%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>边框</h4>
+<h6>
+<a id="user-content-边框图片" class="anchor" href="#%E8%BE%B9%E6%A1%86%E5%9B%BE%E7%89%87" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>边框图片</h6>
+<p>border-image 属性是一个简写属性，用于设置以下属性：
+•	border-image-source  图片
+•	border-image-slice	图片边框向内偏移量
+•	border-image-width	边框宽度
+•	border-image-outset  边框图像区域超出边框的量
+•	border-image-repeat   图像边框是否应平铺(repeated)、铺满(rounded)或拉伸(stretched)。
+可以通过一些特定的软件实现想要的效果<a href="https://camo.githubusercontent.com/c5e57dce8ac9ccc74f7ca04570b9a23da9fbe5b4/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d363166633163343231393164646434372e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/c5e57dce8ac9ccc74f7ca04570b9a23da9fbe5b4/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d363166633163343231393164646434372e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" alt="Image 12.jpg" data-canonical-src="https://upload-images.jianshu.io/upload_images/14538814-61fc1c42191ddd47.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="max-width:100%;"></a></p>
+<h4>
+<a id="user-content-渐变" class="anchor" href="#%E6%B8%90%E5%8F%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>渐变</h4>
+<h6>
+<a id="user-content-线性渐变" class="anchor" href="#%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>线性渐变</h6>
+<p>linear-gradient( 向下/向上/向左/向右/对角方向)
+语法:background: linear-gradient(direction, color-stop1, color-stop2, ...);
+参数:方向,开始的颜色,结束的颜色.
+标准模式下,方向的参数是需要带 to的,比如to right
+但是在兼容模式下不需要带to,并且方向与标准模式下相反
+可以设置角度但同时,方向属性就会失效</p>
+<pre><code>&lt;style&gt;
+      background: linear-gradient(to right bottom,red 60%,green,yellow,purple);
+      background: linear-gradient(18deg,red 60%,green,yellow,purple);
+//兼容模式
+      background: -webkit-linear-gradient(right bottom,red 60%,green,yellow,purple);
+&lt;/style&gt;
+</code></pre>
+<h6>
+<a id="user-content-颜色百分比" class="anchor" href="#%E9%A2%9C%E8%89%B2%E7%99%BE%E5%88%86%E6%AF%94" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>颜色百分比</h6>
+<p>这个颜色从开始位置起到百分之多少开始,第一个色值之前的用第一个色值填充,最后一个色值之后的用最后一个色值填充,中间填充两个颜色的渐变.</p>
+<h6>
+<a id="user-content-重复渐变" class="anchor" href="#%E9%87%8D%E5%A4%8D%E6%B8%90%E5%8F%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>重复渐变<a href="https://camo.githubusercontent.com/cb9ba7118b3ff06c29ed4c530e9f578f7297e563/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d633562643237333333343563343231332e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/cb9ba7118b3ff06c29ed4c530e9f578f7297e563/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d633562643237333333343563343231332e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" alt="Image 13.jpg" data-canonical-src="https://upload-images.jianshu.io/upload_images/14538814-c5bd2733345c4213.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="max-width:100%;"></a>
+</h6>
+<p>其中百分比的的意思是,10%事前面的颜色.后面20%中有10%是渐变的颜色,剩下10%是后面的颜色.</p>
+<h6>
+<a id="user-content-径向渐变" class="anchor" href="#%E5%BE%84%E5%90%91%E6%B8%90%E5%8F%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>径向渐变</h6>
+<p>radial-gradient(由中心向四周渐变),
+语法:background: radial-gradient(center, shape size, start-color, ..., last-color);
+参数意思:渐变中心位置,shape(渐变的形状.默认值为circle圆形 或 ellipse椭圆形);
+size:渐变的大小,四个值,closest-side,最近边.;closest-corner,最近角;farthest-side,最远边;farthest-corner,最远角;</p>
+<h4>
+<a id="user-content-背景" class="anchor" href="#%E8%83%8C%E6%99%AF" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>背景</h4>
+<p>背景在CSS3中也得到很大程度的增强，比如背景图片尺寸、背景裁切区域、背景定位参照点、多重背景等</p>
+<h6>
+<a id="user-content-1background-size" class="anchor" href="#1background-size" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.background-size</h6>
+<p>width height 直接设置宽高 百分比
+cover会自动调整缩放比例，保证图片始终填充满背景区域，如有溢出部分则会被隐藏。
+整个背景图片完整显示在背景区域.<a href="https://camo.githubusercontent.com/c47f4b679b95b4b0f9d65637b084970cf1b7a327/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d653366306132663066613939393263612e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/c47f4b679b95b4b0f9d65637b084970cf1b7a327/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d653366306132663066613939393263612e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" alt="Image 14.jpg" data-canonical-src="https://upload-images.jianshu.io/upload_images/14538814-e3f0a2f0fa9992ca.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="max-width:100%;"></a>
+<strong>contain</strong>会自动调整缩放比例，保证图片始终完整显示在背景区域。但是会有留白;<a href="https://camo.githubusercontent.com/37139f9a37b679140b6daf00f398bc4dbd44498f/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d353966376536626133346632393261372e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/37139f9a37b679140b6daf00f398bc4dbd44498f/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d353966376536626133346632393261372e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" alt="Image 15.jpg" data-canonical-src="https://upload-images.jianshu.io/upload_images/14538814-59f7e6ba34f292a7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="max-width:100%;"></a></p>
+<h6>
+<a id="user-content-2background-origin设置背景定位原点" class="anchor" href="#2background-origin%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%AE%9A%E4%BD%8D%E5%8E%9F%E7%82%B9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.background-origin(设置背景定位原点)</h6>
+<p>border-box以边框做为参考原点；
+padding-box,以内边距作为参考原点
+content-box,以内容作为参考原点
+与background-size结合使用</p>
+<h6>
+<a id="user-content-3background-clip设置背景图片剪裁" class="anchor" href="#3background-clip%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%89%AA%E8%A3%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.background-clip(设置背景图片剪裁)</h6>
+<p>border-box,以边框内作为背景进行剪裁
+padding-box,以内边距作为背景进行剪裁
+content-box,以内容作为背景进行剪裁</p>
+<h6>
+<a id="user-content-4以逗号分隔可以设置多背景可用于自适应局" class="anchor" href="#4%E4%BB%A5%E9%80%97%E5%8F%B7%E5%88%86%E9%9A%94%E5%8F%AF%E4%BB%A5%E8%AE%BE%E7%BD%AE%E5%A4%9A%E8%83%8C%E6%99%AF%E5%8F%AF%E7%94%A8%E4%BA%8E%E8%87%AA%E9%80%82%E5%BA%94%E5%B1%80" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.以逗号分隔可以设置多背景,可用于自适应局<a href="https://camo.githubusercontent.com/3a3164321b1e3f2f9d2b17e764e3c14170e28c22/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d343632643638383361363835636231352e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/3a3164321b1e3f2f9d2b17e764e3c14170e28c22/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d343632643638383361363835636231352e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" alt="Image 16.jpg" data-canonical-src="https://upload-images.jianshu.io/upload_images/14538814-462d6883a685cb15.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="max-width:100%;"></a>
+</h6>
+<h4>
+<a id="user-content-过渡transition" class="anchor" href="#%E8%BF%87%E6%B8%A1transition" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>过渡(transition)</h4>
+<p>在原本的样式中放入过渡的初始状态,在被触发的事件中放入过渡的最终状态.
+补间动画
+transition:param1  param2
+参数1;要过渡的属性
+参数2,过渡需要的时间;
+<strong>过渡</strong>需要被触发,而animate动画则不需要被触发可以立即执行
+特点：当前元素只要有“属性”发生变化时，可以平滑的进行过渡。<a href="https://camo.githubusercontent.com/f4d432b3afff01785de1ec899899a82ca354e7e3/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d356339353734643463303335646435302e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/f4d432b3afff01785de1ec899899a82ca354e7e3/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31343533383831342d356339353734643463303335646435302e6a70673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430" alt="Image 17.jpg" data-canonical-src="https://upload-images.jianshu.io/upload_images/14538814-5c9574d4c035dd50.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="max-width:100%;"></a>
+语法;transition: all .4s cubic-bezier(.59,-1.07,1,1.75)  1s;
+transition-property;过渡的属性,一般为all,
+transition-timing-funcrion;过度的曲线(贝塞尔曲线)linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n);可以在官网链接贝塞尔曲线中找到想要的效果,并获取对应的贝塞尔曲线值.
+transition-delay;过渡的延迟执行时间,可以不写</p>
+<h4>
+<a id="user-content-2d转换" class="anchor" href="#2d%E8%BD%AC%E6%8D%A2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2D转换</h4>
+<p>写在css样式中,效果写在事件中
+在css3 当中，通过transform(变形) 来实现2d 或者3d 转换,其中2d 有，缩放，移动，旋转。</p>
+<h6>
+<a id="user-content-transform-origin" class="anchor" href="#transform-origin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>transform-origin</h6>
+<h6>
+<a id="user-content-scale缩放" class="anchor" href="#scale%E7%BC%A9%E6%94%BE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>scale缩放</h6>
+<p>缩放 scale(x, y) 可以对元素进行水平和垂直方向的缩放，x、y的取值可为小数，<strong>不可为负值</strong>；</p>
+<h6>
+<a id="user-content-translate移动" class="anchor" href="#translate%E7%A7%BB%E5%8A%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>translate移动</h6>
+<p>移动 translate(x, y) 可以改变元素的位置，x、y可为负值；</p>
+<h6>
+<a id="user-content-rotate旋转" class="anchor" href="#rotate%E6%97%8B%E8%BD%AC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>rotate旋转</h6>
+<p>旋转 rotate(deg) 可以对元素进行旋转，正值为顺时针，负值为逆时针；
+transfrom-origin,旋转中心</p>
+</article></body></html>
