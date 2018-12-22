@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <style>
+    body {
+        background: #f9f9f9;
+    }
+    
+    #menu {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    #menu_list {
+        height: 42px;
+        width: 42px;
+        position: relative;
+        margin: 4px;
+    }
+    
+    #menu_list img {
+        border-radius: 21px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transition: 0.5s all ease;
+    }
+    
+    #home {
+        width: 50px;
+        height: 50px;
+        background: url(img/home.png) no-repeat;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 1s;
+    }
+    </style>
+    <script>
+   		window.onload = function() {
+   			var home = document.getElementById("home");
+   			var imgs = document.getElementById("menu_list").getElementsByTagName("img");
+
+   			// 
+   			var direction = true;
+   			var raduis = -150;
+   			home.onclick = function() {
+   				if(direction) {
+   					this.style.WebkitTransform = "rotate(360deg)";
+   					for(var i = 0; i < imgs.length; i++) {
+   						imgs[i].style.transition = "0.5s " + i*100 + "ms";
+   						var lt = toLT(raduis, 90/4*i);
+   						imgs[i].style.left = lt.left +　"px";
+   						imgs[i].style.top = lt.top + "px";
+   						imgs[i].style.WebkitTransform = "scale(1) rotate(-720deg)";
+   					}
+   				}else {
+   					this.style.transform = "rotate(0deg)";
+   					for(var i = 0; i < imgs.length; i++) {
+   						imgs[i].style.WebkitTransition = "0.5s " + (imgs.length-i-1)*100 + "ms";
+   						imgs[i].style.left = 0 +　"px";
+   						imgs[i].style.top = 0 + "px";
+   						imgs[i].style.WebkitTransform = "scale(1) rotate(0deg)";
+   					}
+   				}
+   				direction = !direction;
+   			}
+
+   			function toLT(raduis, deg) {
+   				var left = Math.round(Math.sin(deg/180*Math.PI)*raduis);
+   				var top = Math.round(Math.cos(deg/180*Math.PI)*raduis);
+
+   				return {left:left, top:top};
+   			}
+
+        for(var i = 0; i < imgs.length; i++) {
+          imgs[i].onclick = function() {
+            this.style.transition = "0.2s";
+            this.style.WebkitTransform = "scale(2) rotate(-720deg)";
+            this.style.opacity = "0.5";
+            this.addEventListener("transitionend", function(event) {
+              console.log(event);
+              this.style.transition = "0.1s";
+              this.style.WebkitTransform = "scale(1) rotate(-720deg)";
+              this.style.opacity = "1";
+              this.removeEventListener("transitionend", arguments.callee);
+           })
+          }
+
+          
+        }
+
+   		}
+    </script>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="menu_list">
+            <img src="img/prev.png" alt="" />
+            <img src="img/open.png" alt="" />
+            <img src="img/clos.png" alt="" />
+            <img src="img/full.png" alt="" />
+            <img src="img/refresh.png" alt="" />
+        </div>
+        <div id="home"></div>
+    </div>
+</body>
+
+</html>

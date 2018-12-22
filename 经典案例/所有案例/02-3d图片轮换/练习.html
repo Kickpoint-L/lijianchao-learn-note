@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.d1{
+			position: relative;
+			margin:100px auto;
+			width: 500px;
+			height: 300px;
+			border-radius: 20%;
+			border: 1px solid pink;
+		}
+		.d1 .btn{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border:1px solid gray;
+			font-size: 16px;
+			line-height: 50px;
+			text-align: center;
+			box-shadow: 2px 2px 5px 0px #333;
+		}
+		.d1 .btn1{
+			left:-100px;
+			top: 125px;
+		}
+		.d1 .btn2{
+			right: -100px;
+			top: 125px;
+		}
+	</style>
+</head>
+<body>
+	<div class="d1">
+		<div class="btn btn1">上一张</div>
+		<div class="btn btn2">下一张</div>
+	</div>
+	
+</body>
+</html>
