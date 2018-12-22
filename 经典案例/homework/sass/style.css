@@ -4,7 +4,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #F2F4F5; }
-  body .msg-detail.h5 {
+  body .msg-h5 #msg-detail-h5 {
     background: linear-gradient(to right, #5897FF, #B688FF); }
   body .msg-ui,
   body .msg-h5 {
@@ -14,7 +14,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(99, 99, 99, 0.5); }
+    background-color: rgba(99, 99, 99, 0.5);
+    z-index: 20; }
     body .msg-ui .msg-quit,
     body .msg-h5 .msg-quit {
       overflow: hidden;
@@ -673,13 +674,12 @@ body {
   background: linear-gradient(to right, #3683FF, #7B86FF);
   border-top-left-radius: 0.1333333333rem;
   border-top-right-radius: 0.1333333333rem;
-  cursor: pointer;
   z-index: 22; }
   .footer-up .footer-icon {
     display: block;
     width: 0.4266666667rem;
     height: 0.4266666667rem;
-    margin: 0.2933333333rem auto; }
+    margin: 0.1333333333rem auto; }
 
 .zx {
   overflow: hidden;

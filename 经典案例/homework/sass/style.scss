@@ -7,9 +7,11 @@ body{
 	width:100%;
 	height:100%;
 	background-color: #F2F4F5;
-	
-	.msg-detail.h5{
-		background:linear-gradient(to right,#5897FF,#B688FF);
+
+	.msg-h5{
+		#msg-detail-h5{
+			background:linear-gradient(to right,#5897FF,#B688FF);
+		}
 	}
 	.msg-ui,
 	.msg-h5{
@@ -20,6 +22,7 @@ body{
 		width: 100%;
 		height: 100%;
 		background-color:rgba(99,99,99,.5);
+		z-index: 20;
 		.msg-quit{
 			overflow: hidden;
 			position: fixed;
@@ -778,13 +781,12 @@ body{
 		background:linear-gradient(to right,#3683FF, #7B86FF);
 		border-top-left-radius: pr(5);
 		border-top-right-radius: pr(5);
-		cursor: pointer;
 		z-index: 22;
 		.footer-icon{
 			display: block;
 			width:pr(16);
 			height:pr(16);
-			margin:pr(11) auto;
+			margin:pr(5) auto;
 		}
 	}
 	.zx{
