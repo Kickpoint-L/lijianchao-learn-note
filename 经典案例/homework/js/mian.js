@@ -17,7 +17,8 @@ function resizeFont() {
 //     })
 // })
 console.log($('li').children(2).offset().top);
-$('.header-list').click(function(){
+$('.header-list').click(function(e){
+  e.stopPropagation();
   $('.nav').slideToggle('fast');
 })
 $('#about-msg-ui').click(function(){
@@ -33,7 +34,13 @@ $('.msg-quit').click(function(){
   $('.msg-ui').hide('fast');
   $('.msg-h5').hide('fast');
 })
-
+$(window).on('scroll',function(){
+  $('.nav').css('display','none');
+})
+$(window).on('click',function(e){
+  e.stopPropagation();
+  $('.nav').css('display','none');
+})
 // li.on('click',function(){
 //   var id = $(this).data('target');
 //   $('#'+id).xxx
