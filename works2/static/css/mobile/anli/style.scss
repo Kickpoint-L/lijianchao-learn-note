@@ -1,0 +1,96 @@
+@media (max-width:768px) {
+    .header {
+        .header-c {
+            margin: 0 auto;
+            width: 90%;
+            .nav {
+                display: none;
+            }
+        }
+    }
+    .banner {
+        .banner-c {
+            margin: 0 auto;
+            width: 90%;
+        }
+    }
+    .sub {
+        .sub-c {
+            margin: 0 auto;
+            width: 90%;
+            // background-color: pink;
+            .sub-title {
+                width: 50%;
+                // margin-left: 0;
+                margin: 30px auto;
+                margin-bottom: 10px;
+                .sub-list {
+                    width: 25%;
+                    // background-color: red;
+                    .sub-title-link {
+                        margin: 0 auto;
+                        width: 60%;
+                        height: 100%;
+                        font-size: 12px;
+                        // background-color: blue;
+                    }
+                }
+            }
+            #swiper3 {
+                width: 100%;
+                top: 30px;
+                // background-color: pink;
+                .swiper-slide {
+                    .anli-show:first-child {
+                        margin-top: 0;
+                    }
+                    .anli-show {
+                        margin: 0 15%;
+                        width: 70%;
+                        margin-top: 10px;
+                        // background-color: red;
+                    }
+                    .instroduce-text {
+                        /*background-color: green;*/
+                        .instroduce-title.big {
+                            /*background-color:yellow;*/
+                            font-size: 14px !important;
+                        }
+                        .instroduce-title {
+                            font-size: 12px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 150px;
+        .footer-c {
+            margin: 0 auto;
+            width: 90%;
+            .about-title {
+                line-height: 27px;
+                padding-bottom: 40px;
+                .about-text {
+                    font-size: 18px;
+                }
+            }
+            .footer-contact {
+                .footer-gs {
+                    font-size: 12px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .record {
+        .record-c {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+}

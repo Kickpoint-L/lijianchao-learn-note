@@ -1,0 +1,280 @@
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .content-nav {
+            width: 90%;
+            min-height: 612px;
+            .content-nav-detail {
+                width: 50%;
+            }
+        }
+        .wangzhan {
+            margin-top: 200px;
+            height: 900px;
+            /*background-color:orange;*/
+            .center {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                height: 50%;
+                margin: 0 auto;
+                .wangzhang-show {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    width: 90%;
+                    height: 50%;
+                    /*background-color:blue;*/
+                    .wangzhan-show-dt {
+                        position: absolute;
+                        left: 0px;
+                        top: 50px;
+                        width: 90%;
+                    }
+                    .wangzhan-show-web {
+                        position: absolute;
+                        left: 0;
+                        top: 220px;
+                        width: 80%;
+                    }
+                    .wangzhan-show-mac {
+                        position: absolute;
+                        left: 10px;
+                        top: 60px;
+                        width: 80%;
+                    }
+                    .dotts-wz {
+                        position: absolute;
+                        left: 11%;
+                        top: 260%;
+                        background-color: yellow;
+                    }
+                    .dotts-wz1 {
+                        position: absolute;
+                        left: 60%;
+                        top: 170%;
+                    }
+                }
+                .gzh-text {
+                    position: relative;
+                    left: 0;
+                    top: 80%;
+                    padding-left: 0;
+                    width: 90%;
+                    margin-top: 60px;
+                    /*background-color:red;*/
+                    .gzh-title {
+                        font-size: 24px;
+                    }
+                    .about-detail {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .gzh {
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            .gzh-text {
+                padding-left: 0;
+                width: 90%;
+                /*background-color:yellow;*/
+                .gzh-title {
+                    font-size: 24px;
+                }
+                .gzh-text-detail {
+                    font-size: 12px;
+                }
+            }
+            .gzh-show {
+                position: absolute;
+                left: 0;
+                top: 400px;
+                height: 700px;
+                padding-right: 0;
+                width: 90%;
+                /*top:100px;*/
+                /*background-color:pink;*/
+                .dotts-gzh {
+                    position: absolute;
+                    left: 10%;
+                    top: 50%;
+                }
+                .dotts-gzh1 {
+                    position: absolute;
+                    left: 68%;
+                    top: 40%;
+                }
+                .gzh-show-dt {
+                    position: absolute;
+                    left: 2%;
+                    top: 4%;
+                    width: 85%;
+                    /*background-color:orange;*/
+                }
+                .gzh-phone {
+                    position: absolute;
+                    left: -3.5%;
+                    top: 9%;
+                    width: 40%;
+                }
+                .gzh-show-weixin {
+                    position: absolute;
+                    left: 60%;
+                    top: 20%;
+                    .gzh-weixin-bg {
+                        position: absolute;
+                        left: 25%;
+                        top: 20%;
+                    }
+                }
+                .gzh-show-mobile {
+                    position: absolute;
+                    left: 5%;
+                    top: 40%;
+                    width: 80%;
+                }
+            }
+        }
+        .about {
+            /*position: absolute;*/
+            margin-top: 300px;
+            display: flex;
+            flex-direction: column;
+            /*overflow: hidden;*/
+            margin-bottom: 300px;
+            /*background-color:red;*/
+            .center {
+                width: 90%;
+                margin: 0 auto;
+                .about-js {
+                    /*background-color:yellow;*/
+                    .about-title {
+                        padding-bottom: 30px;
+                        .about-text {
+                            /*font-size: 18px;*/
+                        }
+                        .about-en {
+                            /*font-size: 12px;*/
+                        }
+                    }
+                    .about-detail {
+                        font-size: 12px;
+                    }
+                }
+                .about-show {
+                    .about-line {
+                        width: 100%;
+                        left: 0px;
+                        top: 560px;
+                        border: none;
+                        .about-bg {
+                            left: 0px;
+                            top: -300px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .anli {
+            margin-top: 400px;
+        }
+        .center {
+            width: 90%;
+            margin: 0 auto;
+            .gzh-text {
+                margin-top: 70px;
+                width: 95%;
+                .gzh-text-detail {
+                    width: 100%;
+                }
+            }
+            .anli-header {
+                width: 100%;
+                padding-bottom: 20px;
+                /*background-color:yellow;*/
+                .anli-header-title {
+                    width: 100%;
+                    padding-left: 30%;
+                    /*background-color:yellow;*/
+                    .anli-title-text {
+                        font-size: 16px;
+                    }
+                    .anli-title-en {
+                        font-size: 12px;
+                    }
+                }
+                .anli-header-nav {
+                    overflow: hidden;
+                    font-size: 10px;
+                    left: 12%;
+                    width: 100%;
+                    /*background-color:red;*/
+                    /*left:0;*/
+                    .anli-header-list {
+                        width: 20%;
+                        padding-right: 0;
+                        .anli-header-link {
+                            margin:0 auto;
+                            font-size: 8px;
+                            width: 80%;
+                            /*background-color:green;*/
+                        }
+                    }
+                }
+            }
+            #swiper2 {
+                width: 100%;
+                .swiper-slide {
+                    .anli-show {
+                        margin: 20px 5%;
+                        width: 90%;
+                        .anli-bg {
+                            width: 100%;
+                        }
+                        .instroduce-text {
+                            width: 100%;
+                            /*padding-top:0;*/
+                            /*background-color: green;*/
+                            .instroduce-title.big {
+                                /*background-color:yellow;*/
+                                font-size: 12px !important;
+                            }
+                            .instroduce-title {
+                                font-size: 10px !important;
+                            }
+                        }
+                    }
+                    .anli-show:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .fye{
+                /*position: relative;*/
+                left: 35px;
+                top: 50%;
+                margin-top: 50%;
+                margin-left: 35%;
+                width: 30%;
+                .swiper-button-prev {
+                    position: static;
+                    /*left: 10px;*/
+                    /*top: 10px;*/
+                    left: 38%;
+                }
+                .swiper-button-next {
+                    position: static;
+                    /*left: 0;*/
+                    /*top: 0;*/
+                    left: 53%;
+                }
+            }
+            
+        }
+    }
+}

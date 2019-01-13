@@ -1,0 +1,79 @@
+@media (max-width: 768px) {
+  .header .header-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .header .header-c .nav {
+    display: none;
+  }
+  .banner .banner-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .banner .banner-c .banner-list {
+    /*background-color:red;*/
+  }
+  .banner .banner-c .banner-list .banner-detail {
+    padding-right: 0;
+    /*padding-left: 20px;*/
+    width: 50%;
+  }
+  .banner .banner-c .banner-list .banner-detail .banner-detail-text {
+    font-size: 14px;
+  }
+  .banner .banner-c .banner-list .banner-detail .banner-detail-zw {
+    font-size: 12px;
+  }
+  .sub .sub-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .sub .sub-c .sub-link .btn {
+    font-size: 12px;
+  }
+  .qita .qita-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .qita .qita-c .qita-anli {
+    padding-bottom: 40%;
+  }
+  .qita .qita-c .qita-anli .anli-show {
+    width: 30%;
+  }
+  .qita .qita-c .qita-anli .anli-show .anli-show-text {
+    font-size: 14px;
+  }
+  .qita .qita-c .qita-anli .anli-show .anli-show-text.zw {
+    font-size: 12px;
+  }
+  .qita .qita-c .qita-anli .anli-show .anli-show-bg {
+    width: 100%;
+  }
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 150px;
+  }
+  .footer .footer-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .footer .footer-c .about-title {
+    line-height: 27px;
+    padding-bottom: 40px;
+  }
+  .footer .footer-c .about-title .about-text {
+    font-size: 18px;
+  }
+  .footer .footer-c .footer-contact .footer-gs {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .record .record-c {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

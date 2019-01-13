@@ -1,0 +1,135 @@
+.header {
+    box-shadow: 0px 5px 10px #F4F4F4;
+}
+
+.banner {
+    width: 100%;
+    /*background-color:red;*/
+    .banner-c {
+        margin: 0 auto;
+        width: 1200px;
+        height: 100%;
+        border-bottom: 2px solid #E5E5E5;
+        .banner-title {
+            padding-top: 70px;
+            padding-bottom: 20px;
+            font-size: 20px;
+            font-weight: 999;
+            line-height: 30px;
+            color: #171717;
+            /*background-color:yellow;*/
+        }
+        .banner-list {
+            padding-bottom: 40px;
+            .banner-detail {
+                float: left;
+                padding-right: 80px;
+                .banner-detail-text {
+                    font-size: 16px;
+                    font-weight: 555;
+                    color: #525252;
+                }
+                .banner-detail-zw {
+                    font-size: 14px;
+                    color: #5D5D5D;
+                }
+            }
+        }
+    }
+}
+
+.sub {
+    padding-top: 25px;
+    width: 100%;
+    .sub-c {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 1200px;
+        height: 100%;
+        /*background-color:red;*/
+        .sub-title {
+            padding-bottom: 50px;
+            font-size: 14px;
+            line-height: 25px;
+            color: #585858;
+        }
+        .sub-bg {
+            width: 100%;
+            height: 1222px;
+            background-color: #E4E4E4;
+        }
+        .sub-link {
+            width: 100%;
+            padding-top: 40px;
+            padding-bottom: 90px;
+            height: 40px;
+            /*background-color:red;*/
+            .btn {
+                display: block;
+                margin: 0 auto;
+                width: 15%;
+                /*outline: none;*/
+                font-size: 16px;
+                text-align: center;
+                line-height: 40px;
+                color: #fff;
+                border: 0px;
+                border-radius: 5px;
+                background-color: #0F73D8;
+            }
+        }
+    }
+}
+
+.qita {
+    .qita-c {
+        margin: 0 auto;
+        width: 1200px;
+        height: 100%;
+        /*background-color:blue;*/
+        .qita-title {
+            width: 100%;
+            padding-bottom: 22px;
+            border-bottom: 2px solid #E5E5E5;
+            .qita-title-text {
+                font-size: 18px;
+                font-weight: 999;
+                line-height: 30px;
+                color: #262626;
+            }
+            .qita-title-en {
+                font-size: 12px;
+                line-height: 30px;
+                color: #B9B9B9;
+            }
+        }
+        .qita-anli {
+            display: flex;
+            padding-top: 30px;
+            flex-wrap: wrap;
+            padding-bottom: 380px;
+            justify-content: space-between;
+            /*background-color:purple;*/
+            .anli-show {
+                width: 384px;
+                border: 1px solid #EEEEEE;
+                box-sizing: border-box;
+                .anli-show-text {
+                    width: 100%;
+                    padding-top: 16px;
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #585858;
+                }
+                .anli-show-text.zw {
+                    width: 100%;
+                    font-size: 14px;
+                    padding-top: 0px;
+                    color: #B3B3B3;
+                }
+            }
+        }
+    }
+}

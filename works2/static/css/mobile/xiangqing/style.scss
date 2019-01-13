@@ -1,0 +1,92 @@
+@media (max-width:768px) {
+    .header {
+        .header-c {
+            margin: 0 auto;
+            width: 90%;
+            .nav {
+                display: none;
+            }
+        }
+    }
+    .banner {
+        .banner-c {
+            margin: 0 auto;
+            width: 90%;
+            .banner-list {
+                /*background-color:red;*/
+                .banner-detail {
+                    padding-right: 0;
+                    /*padding-left: 20px;*/
+                    width: 50%;
+                    .banner-detail-text {
+                        font-size: 14px;
+                    }
+                    .banner-detail-zw {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .sub {
+        .sub-c {
+            margin: 0 auto;
+            width: 90%;
+            .sub-link {
+                .btn {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .qita {
+        .qita-c {
+            margin: 0 auto;
+            width: 90%;
+            .qita-anli {
+                padding-bottom: 40%;
+                .anli-show {
+                    width: 30%;
+                    .anli-show-text {
+                        font-size: 14px;
+                    }
+                    .anli-show-text.zw {
+                        font-size: 12px;
+                    }
+                    .anli-show-bg {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 150px;
+        .footer-c {
+            margin: 0 auto;
+            width: 90%;
+            .about-title {
+                line-height: 27px;
+                padding-bottom: 40px;
+                .about-text {
+                    font-size: 18px;
+                }
+            }
+            .footer-contact {
+                .footer-gs {
+                    font-size: 12px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .record {
+        .record-c {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+}

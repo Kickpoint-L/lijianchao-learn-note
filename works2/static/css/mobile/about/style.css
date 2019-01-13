@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+  .banner .banner-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .sub {
+    /*background-color:blue;*/
+  }
+  .sub .sub-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .sub .sub-c .sub-show {
+    overflow: hidden;
+    padding-bottom: 100px;
+  }
+  .sub .sub-c .sub-show .sub-list.active {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .sub .sub-c .sub-show .sub-list {
+    width: 100%;
+    /*background-color:yellow;*/
+  }
+  .sub .sub-c .sub-show .sub-list .sub-list-detail {
+    width: 100%;
+    /*background-color:red;*/
+  }
+  .sub .sub-c .dt {
+    width: 100%;
+    height: 344.7px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

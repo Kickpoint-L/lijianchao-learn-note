@@ -1,0 +1,97 @@
+@media (max-width:768px) {
+    .header {
+        .header-c {
+            margin: 0 auto;
+            width: 90%;
+            .nav {
+                display: none;
+            }
+        }
+    }
+    .banner {
+        .banner-c {
+            margin: 0 auto;
+            width: 90%;
+        }
+    }
+    .introduce {
+        .introduce-c {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 90%;
+            .introduce-show {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                // background-color: blue;
+                .introduce-bg {
+                    padding-left: 50%;
+                    width: 100%;
+                    padding-bottom: 0;
+                    // background-color: red;
+                    img {
+                        width: 50%;
+                    }
+                }
+                .introduce-yq {
+                    // padding-left: 30%;
+                    padding-top: 0%;
+                    width: 100%;
+                    // background-color: green;
+                    .introduce-text {
+                        width: 70%;
+                        .introduce-text-title {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                        .introduce-text-detail {
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+            .mailing {
+                padding-left: 0px;
+                width: 100%;
+                font-size: 16px;
+                padding-bottom: 10%;
+                text-align: center;
+                // background-color: red;
+            }
+        }
+    }
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 150px;
+        .footer-c {
+            margin: 0 auto;
+            width: 90%;
+            .about-title {
+                line-height: 27px;
+                padding-bottom: 40px;
+                .about-text {
+                    font-size: 18px;
+                }
+            }
+            .footer-contact {
+                .footer-gs {
+                    font-size: 12px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .record {
+        .record-c {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+}

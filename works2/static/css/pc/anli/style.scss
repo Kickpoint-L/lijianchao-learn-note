@@ -1,0 +1,116 @@
+@mixin swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /*background:blue;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.sub {
+    width: 100%;
+    padding-bottom: 200px;
+    .sub-c {
+        margin: 0 auto;
+        width: 1200px;
+        height: 100%;
+        /*background-color:yellow;*/
+        .sub-title {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 35px;
+            margin-bottom: 58px;
+            .sub-list {
+                width: 25%;
+                /*background-color:red;*/
+                .sub-title-link {
+                    display: block;
+                    margin: 0 auto;
+                    width: 50%;
+                    height: 31px;
+                    font-size: 15px;
+                    line-height: 31px;
+                    text-align: center;
+                    color: #8C8C8C;
+                    background-color: #fff;
+                }
+                .sub-title-link:hover {
+                    background-color: #0F73D8;
+                    color: #fff;
+                }
+            }
+        }
+        #swiper3 {
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: blue;
+            @include swiper-slide;
+            .swiper-slide {
+                /*background-color:yellow;*/
+                .anli-show:nth-child(3n) {
+                    margin-right: 0;
+                }
+                .anli-show:nth-child(3n+4) {
+                    margin-top: 25px;
+                }
+                .anli-show:nth-child(3n+5) {
+                    margin-top: 25px;
+                }
+                .anli-show:nth-child(3n+6) {
+                    margin-top: 25px;
+                }
+                .anli-show {
+                    display: block;
+                    float: left;
+                    margin-right: 24px;
+                    width: 32%;
+                    /*background-color:pink;*/
+                    .anli-bg {
+                        float: left;
+                        width: 100%;
+                    }
+                    .instroduce-text {
+                        float: left;
+                        padding: 20px 0;
+                        width: 100%;
+                        border: 1px solid #EEEEEE;
+                        border-top: none;
+                        box-sizing: border-box;
+                        /*background-color:red;*/
+                        .instroduce-title {
+                            display: block;
+                            text-align: center;
+                            font-size: 12px;
+                            line-height: 25px;
+                            color: #B3B3B3;
+                        }
+                        .instroduce-title.big {
+                            font-size: 18px;
+                            color: #666;
+                        }
+                    }
+                }
+                /*.anli-show.active{
+					margin-right: 0;
+				}
+				.anli-show.top{
+					margin-top: 25px;
+				}*/
+            }
+        }
+    }
+}

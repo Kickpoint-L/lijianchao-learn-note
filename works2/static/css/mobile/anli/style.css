@@ -1,0 +1,79 @@
+@media (max-width: 768px) {
+  .header .header-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .header .header-c .nav {
+    display: none;
+  }
+  .banner .banner-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .sub .sub-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .sub .sub-c .sub-title {
+    width: 50%;
+    margin: 30px auto;
+    margin-bottom: 10px;
+  }
+  .sub .sub-c .sub-title .sub-list {
+    width: 25%;
+  }
+  .sub .sub-c .sub-title .sub-list .sub-title-link {
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+    font-size: 12px;
+  }
+  .sub .sub-c #swiper3 {
+    width: 100%;
+    top: 30px;
+  }
+  .sub .sub-c #swiper3 .swiper-slide .anli-show:first-child {
+    margin-top: 0;
+  }
+  .sub .sub-c #swiper3 .swiper-slide .anli-show {
+    margin: 0 15%;
+    width: 70%;
+    margin-top: 10px;
+  }
+  .sub .sub-c #swiper3 .swiper-slide .instroduce-text {
+    /*background-color: green;*/
+  }
+  .sub .sub-c #swiper3 .swiper-slide .instroduce-text .instroduce-title.big {
+    /*background-color:yellow;*/
+    font-size: 14px !important;
+  }
+  .sub .sub-c #swiper3 .swiper-slide .instroduce-text .instroduce-title {
+    font-size: 12px !important;
+  }
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 150px;
+  }
+  .footer .footer-c {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .footer .footer-c .about-title {
+    line-height: 27px;
+    padding-bottom: 40px;
+  }
+  .footer .footer-c .about-title .about-text {
+    font-size: 18px;
+  }
+  .footer .footer-c .footer-contact .footer-gs {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .record .record-c {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
